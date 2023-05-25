@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: normal;
+    text-decoration: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ol,
+ul {
+    list-style: none;
+}
+del {
+    text-decoration: line-through;
+}
+body {
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    background: #2e2e35;
+    overflow-x: hidden;
+    min-width: 320px;
+    font-weight: 500;
+    color: #dadada;
+    text-transform: capitalize;
+}
+input,
+textarea,
+select {
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+a {
+    color: #dadada;
+}
+
+.submit:hover {
+    filter: alpha(opacity = 85);
+    -moz-opacity: 0.85;
+    -khtml-opacity: 0.85;
+    opacity: 0.85;
+}
+.thumb {
+    display: block;
+}
+.thumb img {
+    display: block;
+    width: 100%;
+}
+p {
+    line-height: 1.6em;
+    font-size: 16px;
+    font-family: "open_sansregular", Arial;
+    font-weight: 500;
+    color: #dadada;
+}
+.hidden {
+    display: none;
+}
+br.clear {
+    clear: both;
+    line-height: 0;
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+@font-face {
+    font-family: "open_sanslight";
+    src: url("../fonts/opensans-light-webfont.woff2") format("woff2"),
+        url("../fonts/opensans-light-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "open_sansregular";
+    src: url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
+        url("../fonts/opensans-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "open_sanssemibold";
+    src: url("../fonts/opensans-semibold-webfont.woff2") format("woff2"),
+        url("../fonts/opensans-semibold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+header div.contents {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header div.contents div.logo {
+    font-family: "open_sanssemibold";
+}
+header div.contents div.logo h1 span.dev {
+    color: #e4aa48;
+}
+
+header div.contents div.nav-bar {
+    font-family: "open_sanssemibold";
+    font-size: 18px;
+}
+header div.contents div.nav-bar a {
+    margin-right: 10px;
+}
+header div.contents div.nav-bar a:last-child {
+    margin-right: 0;
+}
+
+#home {
+}
+#home div.content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#home div.content div.left {
+    max-width: 300px;
+    margin-top: 100px;
+}
+#home div.content div.left h2 {
+    font-family: "open_sanssemibold";
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+#home div.content div.left h2 span {
+    color: #e4aa48;
+    font-size: 50px;
+}
+#home div.content div.line {
+    border: 2px solid #e4aa48;
+    width: 30%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+#home div.content div.social {
+    font-family: "open_sanssemibold";
+    margin-bottom: 60px;
+}
+#home div.content div.button {
+    font-family: "open_sanssemibold";
+    border: 1px solid #e4aa48;
+    display: inline-block;
+    padding: 20px;
+    color: #e4aa48;
+}
+#home div.content div.button a {
+    color: #e4aa48;
+    font-size: 20px;
+}
+#home div.image {
+    width: 300px;
+    position: absolute;
+    right: 50%;
+}
+#home div.image img {
+    width: 100%;
+    display: block;
+}
+#home div.content div.right {
+    max-width: 500px;
+    margin-top: 100px;
+}
+#home div.content div.right h5.subtitle {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "open_sanssemibold";
+    color: #e4aa48;
+    margin-bottom: 10px;
+}
+#home div.content div.right .heading {
+    font-size: 35px;
+    font-family: "open_sanssemibold";
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+#home div.content div.right .description {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+#home div.content div.right span.button {
+    color: #e4aa48;
+    display: inline-block;
+    position: relative;
+}
+#home div.content div.right span.button:hover {
+    border-bottom: 1px solid #e4aa48;
+}
+
+#home div.content div.right span svg {
+    margin: auto 0;
+}
+#home div.content div.right a.button {
+    font-size: 18;
+    display: inline-block;
+    padding: 16px 0;
+    font-family: "open_sanssemibold";
+    color: #e4aa48;
+    margin-right: 5px;
+}
+
+#home div.content div.right span.svg {
+    position: absolute;
+    top: 13px;
+}
