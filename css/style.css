@@ -26,7 +26,6 @@ body {
     min-width: 320px;
     font-weight: 500;
     color: #dadada;
-    text-transform: capitalize;
 }
 input,
 textarea,
@@ -120,6 +119,32 @@ header div.contents div.nav-bar a:last-child {
 }
 
 #home {
+    padding: 120px 0;
+}
+
+#home div.dynamic-text {
+    display: inline-flex;
+}
+
+#home div.dynamic-text h2 {
+    position: relative;
+}
+
+#home div.dynamic-text h2::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #2e2e35;
+    border-left: 1px solid #dadada;
+    left: 0;
+    animation: typing 2s steps(6) infinite;
+}
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
 }
 #home div.content {
     display: flex;
@@ -151,19 +176,20 @@ header div.contents div.nav-bar a:last-child {
 }
 #home div.content div.button {
     font-family: "open_sanssemibold";
-    border: 1px solid #e4aa48;
-    display: inline-block;
-    padding: 20px;
     color: #e4aa48;
 }
 #home div.content div.button a {
     color: #e4aa48;
     font-size: 20px;
+    padding: 20px;
+    display: inline-block;
+    border: 1px solid #e4aa48;
 }
 #home div.image {
     width: 300px;
     position: absolute;
     right: 50%;
+    bottom: 0;
 }
 #home div.image img {
     width: 100%;
@@ -200,9 +226,6 @@ header div.contents div.nav-bar a:last-child {
     border-bottom: 1px solid #e4aa48;
 }
 
-#home div.content div.right span svg {
-    margin: auto 0;
-}
 #home div.content div.right a.button {
     font-size: 18;
     display: inline-block;
@@ -215,4 +238,305 @@ header div.contents div.nav-bar a:last-child {
 #home div.content div.right span.svg {
     position: absolute;
     top: 13px;
+}
+
+#service {
+    background: #34343b;
+    padding: 120px 0;
+}
+
+#service div.container {
+}
+#service div.container div.top {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+#service div.container div.top h3 {
+    color: #e4aa48;
+    font-family: "open_sanssemibold";
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+#service div.container div.top h2 {
+    font-family: "open_sanssemibold";
+    margin-bottom: 16px;
+    font-size: 28px;
+}
+#service div.container div.top p {
+    margin-bottom: 50px;
+}
+#service div.container div.bottom {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#service div.container div.bottom div.item {
+    text-align: center;
+    background-color: #2e2e35;
+    padding: 16px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#service div.container div.bottom div.item:hover {
+    color: #e4aa48;
+}
+#service div.container div.bottom div.item:hover img.white {
+    display: none;
+}
+#service div.container div.bottom div.item div.icon {
+    width: 50px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    position: relative;
+}
+#service div.container div.bottom div.item div.icon img {
+    display: block;
+    width: 100%;
+}
+#service div.container div.bottom div.item div.icon img.white {
+    position: absolute;
+}
+#service div.container div.bottom div.item h4 {
+    font-size: 20px;
+    font-family: "open_sanssemibold";
+}
+#experience {
+    padding: 120px 0;
+}
+#experience .top {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+#experience .top h3 {
+    color: #e4aa48;
+    font-family: "open_sanssemibold";
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+#experience .top h2 {
+    font-family: "open_sanssemibold";
+    margin-bottom: 18px;
+    font-size: 28px;
+}
+#experience .top p {
+    margin-bottom: 50px;
+}
+#experience .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+#experience .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+#experience .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+#experience .container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #34343b;
+    border: 4px solid #e4aa48;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+#experience .left {
+    left: 0;
+}
+
+/* Place the container to the right */
+#experience .right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+#experience .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+#experience .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+#experience .right::after {
+    left: -16px;
+}
+
+/* The actual content */
+#experience .content {
+    padding: 20px 30px;
+    background-color: #34343b;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    #experience .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    #experience .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    #experience .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    #experience .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    #experience .right {
+        left: 0%;
+    }
+}
+
+#projects {
+    padding: 120px 0;
+    background: #34343b;
+}
+#projects .top {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+#projects .top h3 {
+    color: #e4aa48;
+    font-family: "open_sanssemibold";
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+#projects .top h2 {
+    font-family: "open_sanssemibold";
+    margin-bottom: 18px;
+    font-size: 28px;
+}
+#projects .top p {
+    margin-bottom: 50px;
+}
+#projects .top .buttons {
+    display: flex;
+    gap: 16px;
+}
+#projects .top .buttons button {
+    font-size: 20px;
+    font-family: "open_sanssemibold";
+    display: inline-block;
+    color: #dadada;
+    padding-bottom: 10px;
+}
+#projects .top .buttons button:hover {
+    color: #e4aa48;
+}
+.border-bottom {
+    border-bottom: 3px solid #e4aa48;
+    color: #e4aa48 !important;
+}
+#contact {
+    padding: 80px 0;
+}
+#contact h3 {
+    color: #e4aa48;
+    font-family: "open_sanssemibold";
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+div.top p {
+    font-size: 15px;
+    font-family: "open_sanssemibold";
+    margin-bottom: 10px;
+}
+
+#contact form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+#contact div.form-contents {
+    text-align: center;
+}
+
+#contact div.form-inputs {
+    display: flex;
+    flex-direction: column;
+}
+#contact div.form-inputs input,
+textarea {
+    padding: 20px;
+    background: #dadada;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact form button {
+    font-size: 20px;
+    color: #e4aa48;
+    font-family: "open_sanssemibold";
+    padding: 15px;
+    border: 1px solid #e4aa48;
+    border-radius: 5px;
 }

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nikhil P</title>
         <link rel="stylesheet" href="./css/style.css" />
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
     </head>
     <body>
         <!-- <h1><span>N</span><span class="dev">Dev</span></h1> -->
@@ -29,7 +30,10 @@
             <div class="wrapper">
                 <div class="content">
                     <div class="left">
-                        <h2>Nikhil P<span>.</span></h2>
+                        <h2>Hi, I Am</h2>
+                        <div class="dynamic-text">
+                            <h2>Nikhil <span>.</span></h2>
+                        </div>
                         <div class="line"></div>
                         <div class="social">
                             <a href="#">linkedin</a>|<a href="#">github</a>|<a
@@ -81,10 +85,146 @@
                 </div>
             </div>
         </section>
-        <section id="service"></section>
-        <section id="experience"></section>
-        <section id="projects"></section>
-        <section id="contact"></section>
+        <section id="service">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="top">
+                        <h3>Services</h3>
+                        <h2>What I Am Great At</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Temporibus inventore, beatae velit quo
+                            delectus impedit rerum nisi numquam incidunt,
+                            consectetur vitae, minima maiores blanditiis. Id
+                            molestias neque aut nesciunt saepe!
+                        </p>
+                    </div>
+                    <div class="bottom">
+                        <div class="item">
+                            <div class="container">
+                                <div class="icon">
+                                    <img
+                                        class="white"
+                                        src="./images/pen.png"
+                                        alt="pen"
+                                    />
+                                    <img
+                                        src="./images/pen-yellow.png"
+                                        alt="pem"
+                                    />
+                                </div>
+                                <h4>UI/UX design</h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="container">
+                                <div class="icon">
+                                    <img
+                                        class="white"
+                                        src="./images/code-white.png"
+                                        alt="code"
+                                    />
+                                    <img src="./images/code.png" alt="code" />
+                                </div>
+                                <h4>Web Development</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <div class="wrapper">
+                <div class="top">
+                    <h3>Experience</h3>
+                    <h2>My Proffessional Journey</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Iure libero ab tenetur ullam commodi, enim beatae aut
+                        est similique qui consequatur cupiditate quos labore
+                        facere non laborum cum debitis quo.
+                    </p>
+                </div>
+                <div class="timeline">
+                    <div class="container left">
+                        <div class="content">
+                            <h2>2017</h2>
+                            <p>Lorem ipsum..</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>2016</h2>
+                            <p>Lorem ipsum..</p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>2016</h2>
+                            <p>Lorem ipsum..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="wrapper">
+                <div class="top">
+                    <h3>Projects</h3>
+                    <h2>My pearsonal Projects</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Iure libero ab tenetur ullam commodi, enim beatae aut
+                        est similique qui consequatur cupiditate quos labore
+                        facere non laborum cum debitis quo.
+                    </p>
+                    <div class="buttons">
+                        <button class="btn" onclick="btnClicked(`all`)">
+                            All
+                        </button>
+                        <button class="btn" onclick="btnClicked(`webdev`)">
+                            Web Development
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="wrapper">
+                <form id="contact-form">
+                    <div class="top">
+                        <h3 class="heading">Get In Touch</h3>
+                        <p>I will get back to you Asap!</p>
+                    </div>
+                    <div class="form-contents">
+                        <div class="form-inputs">
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Name"
+                                required
+                            />
+                            <input type="tel" id="phone" placeholder="Phone" />
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Email"
+                                required
+                            />
+                            <textarea
+                                type="text"
+                                id="message"
+                                placeholder="message"
+                                rows="10"
+                            ></textarea>
+                        </div>
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
         <footer></footer>
+
+        <script src="./script/index.js"></script>
     </body>
 </html>
