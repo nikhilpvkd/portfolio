@@ -18,6 +18,9 @@ ul {
 del {
     text-decoration: line-through;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 body {
     font-family: "open_sansregular", Arial, Helvetica, sans-serif;
     font-size: 17px;
@@ -26,6 +29,8 @@ body {
     min-width: 320px;
     font-weight: 500;
     color: #dadada;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer, Edge */
 }
 input,
 textarea,
@@ -70,6 +75,10 @@ br.clear {
     margin: 0 auto;
     max-width: 1200px;
 }
+.border-bottom {
+    border-bottom: 3px solid #e4aa48;
+    color: #e4aa48 !important;
+}
 @font-face {
     font-family: "open_sanslight";
     src: url("../fonts/opensans-light-webfont.woff2") format("woff2"),
@@ -113,6 +122,9 @@ header div.contents div.nav-bar {
 }
 header div.contents div.nav-bar a {
     margin-right: 10px;
+}
+header div.contents div.nav-bar a:hover {
+    color: #e4aa48;
 }
 header div.contents div.nav-bar a:last-child {
     margin-right: 0;
@@ -174,6 +186,9 @@ header div.contents div.nav-bar a:last-child {
     font-family: "open_sanssemibold";
     margin-bottom: 60px;
 }
+#home div.content div.social a:hover {
+    color: #e4aa48;
+}
 #home div.content div.button {
     font-family: "open_sanssemibold";
     color: #e4aa48;
@@ -194,6 +209,8 @@ header div.contents div.nav-bar a:last-child {
 #home div.image img {
     width: 100%;
     display: block;
+    mix-blend-mode: luminosity; /* Adjust the mix-blend-mode as needed */
+    background-color: #2e2e35;
 }
 #home div.content div.right {
     max-width: 500px;
@@ -459,7 +476,7 @@ header div.contents div.nav-bar a:last-child {
 #projects .top {
     text-align: center;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
 }
 #projects .top h3 {
     color: #e4aa48;
@@ -489,10 +506,45 @@ header div.contents div.nav-bar a:last-child {
 #projects .top .buttons button:hover {
     color: #e4aa48;
 }
-.border-bottom {
-    border-bottom: 3px solid #e4aa48;
-    color: #e4aa48 !important;
+
+#projects div.project-cards {
+    display: flex;
+    justify-content: space-between;
 }
+
+#projects div.project-cards div.project-card {
+    width: 30%;
+    text-align: center;
+    background: #2e2e35;
+    padding: 22px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px #2e2e35;
+}
+#projects div.project-card div.image {
+    margin-bottom: 10px;
+}
+#projects div.project-card div.image img {
+    width: 100%;
+    display: block;
+}
+
+#projects div.description {
+    margin-bottom: 10px;
+}
+
+#projects div.description h5 {
+    margin-bottom: 10px;
+    font-family: "open_sanssemibold";
+    font-size: 18px;
+}
+#projects a.button {
+    display: inline-block;
+    padding: 20px;
+    color: #e4aa48;
+    border: 1px solid #e4aa48;
+    border-radius: 5px;
+}
+
 #contact {
     padding: 80px 0;
 }
@@ -539,4 +591,50 @@ textarea {
     padding: 15px;
     border: 1px solid #e4aa48;
     border-radius: 5px;
+}
+
+footer {
+    padding: 60px 0;
+    background: #34343b;
+    text-align: center;
+}
+
+footer small {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+footer div.buttons a {
+    margin-right: 15px;
+}
+footer div.buttons a:nth-child(1):hover {
+    color: #1769aa;
+}
+footer div.buttons a:nth-child(2):hover {
+    color: #f58529;
+}
+footer div.buttons a:nth-child(3):hover {
+    color: #e4aa48;
+}
+.slick-prev {
+    left: 0;
+    z-index: 10; /* Adjust the left position as needed */
+}
+
+.slick-next {
+    right: 0; /* Adjust the right position as needed */
+    z-index: 10;
+}
+
+/* CSS to style the arrows (optional) */
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: "open_sanssemibold";
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
 }

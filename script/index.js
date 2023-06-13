@@ -38,3 +38,14 @@ form.addEventListener("submit", (e) => {
         document.getElementById("message").value = "";
     });
 });
+
+$(document).ready(function () {
+    $(".your-class").slick({
+        arrows: true, // Show arrows
+        autoplay: true,
+        prevArrow:
+            '<button type="button" class="slick-prev"><iconify-icon icon="ooui:next-rtl"></iconify-icon></button>', // Left arrow element
+        nextArrow:
+            '<button type="button" class="slick-next"><iconify-icon icon="ooui:previous-rtl"></iconify-icon></button>',
+    });
+});
