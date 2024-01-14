@@ -31,6 +31,7 @@ form.addEventListener("submit", (e) => {
         Subject: "New lead from web-site",
         Body: body,
     }).then((message) => {
+        console.log(message);
         alert(message);
         document.getElementById("name").value = "";
         document.getElementById("phone").value = "";
